@@ -4,33 +4,24 @@
 @import "../../sass/abstract/structures";
 
 nav {
-  height: $header-height-Small;
+  @include clearfix;
   background-color: $color-white;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  z-index: 100;
-  padding: 10px;
 
   #logo {
     float: left;
-    margin: 25px 25px 0 5%;
     font-weight: bold;
+    margin: 10px 25px 0 5%;
   }
-  @include clearfix;
 }
 
 .navigation {
   list-style: none;
   float: left;
   padding: 10px;
-  font-size: 12px;
+
   li {
     display: inline-block;
     margin-left: 30px;
-    font-size: small;
     &:first-child {
       margin: 0;
     }
@@ -42,29 +33,4 @@ nav {
 
 .admin-area {
   float: right;
-  background-color: hotpink;
-}
-
-.signup {
-  &:link {
-    @extend %admin-area-placeholder;
-  }
-}
-
-.signup {
-  &:link {
-    @extend %admin-area-placeholder;
-  }
-
-  &:hover {
-  }
-}
-
-.login {
-  &:link {
-    @extend %admin-area-placeholder;
-  }
-
-  &:hover {
-  }
 }

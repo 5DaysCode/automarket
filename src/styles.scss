@@ -3,16 +3,21 @@
 @import "./sass/abstract/variables";
 @import "./sass/abstract/mixins";
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: $color-lightgrey;
 }
 
-.main-container {
-  max-width: 100vw; // <= try this
-  min-height: 100vh;
-  padding: 15px;
-  background-color: $color-lightgrey;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+// .main-container {
+//   max-width: 100vw; // <= try this
+//   min-height: 100vh;
+//   padding: 15px;
+//   background-color: $color-lightgrey;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }

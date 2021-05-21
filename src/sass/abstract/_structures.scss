@@ -1,8 +1,9 @@
 @import "../abstract/variables";
 
 %admin-area-placeholder {
-  padding: 12px;
+  padding: 15px;
   display: inline-block;
   text-align: center;
   width: $width-adminarea;
+  margin: 0 0 0 0;
 }
