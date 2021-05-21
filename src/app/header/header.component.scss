@@ -30,6 +30,15 @@ nav {
   }
 }
 
+.navigation-right {
+  list-style: none;
+  padding: 10px;
+  li {
+    display: inline-block;
+    margin-right: 30px;
+  }
+}
+
 .admin-area {
   float: right;
 }
