@@ -1,6 +1,9 @@
 @import "../../sass/abstract/variables";
+@import "../../sass/abstract/mixins";
+@import "../../sass/abstract/functions";
+@import "../../sass/abstract/structures";
 
-.header {
+nav {
   height: $header-height-Small;
   background-color: $color-white;
   position: fixed;
@@ -9,14 +12,59 @@
   right: 0;
   width: 100%;
   z-index: 100;
+  padding: 10px;
 
   #logo {
     float: left;
-    margin: 12px 0 0 5%;
+    margin: 25px 25px 0 5%;
+    font-weight: bold;
+  }
+  @include clearfix;
+}
+
+.navigation {
+  list-style: none;
+  float: left;
+  padding: 10px;
+  font-size: 12px;
+  li {
+    display: inline-block;
+    margin-left: 30px;
+    font-size: small;
+    &:first-child {
+      margin: 0;
+    }
+    a:link {
+      @include style-link-text($color-black);
+    }
   }
 }
 
-//Navigation
-.nav {
+.admin-area {
   float: right;
+  background-color: hotpink;
+}
+
+.signup {
+  &:link {
+    @extend %admin-area-placeholder;
+  }
+}
+
+.signup {
+  &:link {
+    @extend %admin-area-placeholder;
+  }
+
+  &:hover {
+  }
+}
+
+.login {
+  &:link {
+    @extend %admin-area-placeholder;
+  }
+
+  &:hover {
+  }
 }
