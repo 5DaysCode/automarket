@@ -6,36 +6,42 @@
 nav {
   @include clearfix;
   background-color: $color-white;
+  height: 65px;
 
   #logo {
     float: left;
     font-weight: bold;
     margin: 10px 25px 0 5%;
+    padding: 10px;
   }
 }
 
 .navigation {
   list-style: none;
   float: left;
-  padding: 10px;
+  padding: 18px;
+
   li {
     display: inline-block;
     margin-left: 30px;
     &:first-child {
       margin: 0;
     }
-    a:link {
+    a {
       @include style-link-text($color-black);
     }
   }
 }
-
 .navigation-right {
   list-style: none;
-  padding: 10px;
+  padding: 18px;
   li {
     display: inline-block;
     margin-right: 30px;
+
+    a {
+      @include style-link-text($color-black);
+    }
   }
 }
 
@@ -43,95 +49,38 @@ nav {
   float: right;
 }
 
+.btn {
+  background: $color-orange;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 12px;
+  border: none;
+  border-radius: 8px;
+}
+
 .btn-main {
+  color: #fff;
+  height: 41px;
+
   &:link {
     @extend %admin-area-placeholder;
   }
 
   &:hover {
+    background: #27ae60;
+  }
+
+  &:active {
+    background: yellow;
+    top: 2px;
+  }
+
+  .fa {
+    padding: 0 5px 0 0;
+    font-size: 12px;
   }
 }
 
-.btn-hot {
-  &:link {
-    @extend%admin-area-placeholder;
-  }
-
-  &:hover {
-  }
-}
-
-.btn {
-  border: none;
-  font-family: "Lato";
-  font-size: inherit;
-  color: inherit;
-  background: none;
-  cursor: pointer;
-  display: inline-block;
-  background: $color-orange;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 300;
-  outline: none;
-  position: relative;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.btn:after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-/* Pseudo elements for icons */
-.btn:before {
-  font-family: "FontAwesome";
-
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  position: relative;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* Icon separator */
-.btn-sep {
-  padding: 11px 12px 25px 82px;
-}
-
-.btn-sep:before {
-  background: rgba(0, 0, 0, 0.15);
-}
-
-/* Button 2 */
-.btn-2 {
-  background: #2ecc71;
-  color: #fff;
-}
-
-.btn-2:hover {
-  background: #27ae60;
-}
-
-.btn-2:active {
-  background: #27ae60;
-  top: 2px;
-}
-
-.btn-2:before {
-  position: absolute;
-  height: 100%;
-  left: 0;
-  top: 0;
-  line-height: 3;
-  font-size: 140%;
-  width: 60px;
+.mat-icon {
+  font-size: 18px;
 }
